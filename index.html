@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator with i18next</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    <h1>Type a Phrase Key to Translate</h1>
+
+    <label for="from-lang">From Language:</label>
+    <select id="from-lang">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+    </select>
+
+    <label for="to-lang">To Language:</label>
+    <select id="to-lang">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+    </select>
+
+    <input type="text" id="phrase-input" placeholder="Enter a phrase key (e.g., 'hello')" />
+    <button onclick="translatePhrase()">Translate</button>
+
+    <h2>Translated Phrase:</h2>
+    <div id="translated-text"></div>
+
+    <script src="https://unpkg.com/i18next@21.6.1/i18next.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
